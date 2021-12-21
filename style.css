@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: popp; */ 
+}
+.container{
+    /* border: 6px solid rebeccapurple; */
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), transparent),url(images/background.png);
+    /* background-color: rgb(47, 47, 47); */
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.cart-icon{
+    width: 30px;
+    cursor: pointer;
+}
+nav ul{
+    
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    /* border: 2px solid white; */
+    background-color: white;
+    content: '';
+    width: 0;
+    height: 0.5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+.text-box{
+    color: white;
+    position: absolute;
+    bottom: 8%;
+}
+.text-box p{
+    font-size: 50px;
+    font-weight: 600;
+}
+.text-box h1{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background: url(images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: shine 20s linear infinite;
+}
+@keyframes shine {
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.text-box h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+.text-box .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.text-box a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border:  2px solid white;
+    display: flex;
+    align-items: center;
+}
+.text-box a span{
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 5px;
+}
+.social-icon{
+    /* border:  2px solid rgb(22, 235, 224); */
+position: absolute;
+right: 5%;
+bottom: 8%;
+}
+.social-icon img{
+    width: 25px;
+    display: block;
+    margin: 15px 5px;
+}
+
+
+.intro{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0 8%;
+    
+}
+.intro .info{
+    /* border: 2px solid rgb(72, 216, 29); */
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: right; */
+    position: relative;
+}
+
+.parabx{
+    /* border: 2px solid rgb(216, 151, 29); */
+    width: 70%;
+    position: absolute;
+    left: 35%;
+    z-index: 10;
+}
+/*
+.intro .info h2{
+    text-align: left;
+    width: 50%;
+    border: 2px solid rgb(216, 151, 29);
+    margin-bottom: 5px;
+} .*/
+.intro .info .parabx p{
+    color: rgb(6, 112, 119);
+    font-size: 19px;
+    /* width: 100%; */
+    margin-top: 11px;
+    /* border: 2px solid rgb(168, 16, 238); */
+} 
+
+
+.intro .imgbx .imgbckg{
+    /* border: 2px solid rgb(11, 180, 192); */
+    width: 100%;
+    height: 100%;
+    background-color: #1f6ab5;
+}
+.intro .imgbx{
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.intro .imgbx img{
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
